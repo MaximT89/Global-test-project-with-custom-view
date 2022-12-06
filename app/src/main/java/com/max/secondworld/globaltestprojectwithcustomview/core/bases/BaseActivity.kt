@@ -5,6 +5,7 @@ import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.max.secondworld.globaltestprojectwithcustomview.core.extension.log
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -16,6 +17,8 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         if (ev.action == MotionEvent.ACTION_DOWN) hideKeyboard()
         return super.dispatchTouchEvent(ev)
+
+        log("some test")
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
