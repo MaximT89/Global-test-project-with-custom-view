@@ -33,6 +33,7 @@ class WeatherView @JvmOverloads constructor(
         isAntiAlias = true
         style = Paint.Style.FILL
         pathEffect = CornerPathEffect(roundCorner)
+        setShadowLayer(25f, 15f, 15f, colorBlack)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
