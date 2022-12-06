@@ -40,8 +40,6 @@ class RingView @JvmOverloads constructor(
         paint.style = Paint.Style.FILL_AND_STROKE
         paint.strokeWidth = 10f
 
-        //test
-
         val path = Path()
 
         path.reset()

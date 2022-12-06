@@ -11,8 +11,15 @@ class FirstFragment : BaseFragment<FragmentFirstBinding, FirstViewModel>(Fragmen
 
     override fun initView() = with(binding){
 
-        ring.setColorPath(ContextCompat.getColor(requireActivity(), R.color.alice_blue))
+        rect1.textTemperature(-40)
 
+
+        rect2.textTemperature(-25)
+        rect3.textTemperature(-10)
+        rect4.textTemperature(5)
+        rect5.textTemperature(10)
+        rect6.textTemperature(20)
+        rect7.textTemperature(38)
     }
 
     override fun initObservers() {

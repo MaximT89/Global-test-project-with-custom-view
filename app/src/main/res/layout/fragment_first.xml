@@ -6,14 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".ui.screens.first.FirstFragment">
 
-    <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RingView
-        android:id="@+id/ring"
-        android:layout_width="187dp"
-        android:layout_height="194dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="40dp"
+            android:orientation="horizontal">
+
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+                android:id="@+id/rect1"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="5dp" />
+
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+                android:id="@+id/rect2"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="5dp" />
+
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+                android:id="@+id/rect3"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="5dp" />
+
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+                android:id="@+id/rect4"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="5dp" />
+
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+                android:id="@+id/rect5"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="5dp" />
+
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+                android:id="@+id/rect6"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="5dp"/>
+
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+                android:id="@+id/rect7"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="5dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
