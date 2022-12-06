@@ -1,8 +1,6 @@
 package com.max.secondworld.globaltestprojectwithcustomview.ui.screens.first
 
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
-import com.max.secondworld.globaltestprojectwithcustomview.R
 import com.max.secondworld.globaltestprojectwithcustomview.core.bases.BaseFragment
 import com.max.secondworld.globaltestprojectwithcustomview.databinding.FragmentFirstBinding
 

@@ -13,7 +13,6 @@ object GradientCreator {
         ContextCompat.getColor(context, R.color.dark_blue)
     )
 
-
     // -29 .. -10
     fun getCold(context: Context) : IntArray = intArrayOf(
     ContextCompat.getColor(context, R.color.light_sky_blue),

@@ -7,6 +7,7 @@
     tools:context=".ui.screens.first.FirstFragment">
 
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,18 +53,26 @@
                 android:id="@+id/rect6"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
-                android:layout_marginHorizontal="5dp"/>
+                android:layout_marginHorizontal="5dp" />
 
             <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
                 android:id="@+id/rect7"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
-                android:layout_marginHorizontal="5dp"/>
+                android:layout_marginHorizontal="5dp" />
 
         </LinearLayout>
     </HorizontalScrollView>
 
 
+    <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.WeatherView
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
