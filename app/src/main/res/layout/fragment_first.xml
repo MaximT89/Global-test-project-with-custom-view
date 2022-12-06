@@ -67,8 +67,8 @@
 
     <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.WeatherView
         android:id="@+id/weatherView"
-        android:layout_width="match_parent"
-        android:layout_height="221dp"
+        android:layout_width="269dp"
+        android:layout_height="306dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

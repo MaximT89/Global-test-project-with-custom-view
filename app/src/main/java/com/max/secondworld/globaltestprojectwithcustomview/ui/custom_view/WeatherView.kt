@@ -14,8 +14,6 @@ class WeatherView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
-    private var size = 500f
-    private var strokeWidth = 10f
     private var colorWhite: Int = resources.getColor(R.color.white)
     private var colorBlack: Int = resources.getColor(R.color.black)
     private var intArray = GradientCreator.getStandart(context)
@@ -34,12 +32,6 @@ class WeatherView @JvmOverloads constructor(
         color = colorWhite
         textSize = 120f
         typeface = Typeface.create("Arial", Typeface.BOLD)
-    }
-
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-        size = min(measuredWidth, measuredHeight).toFloat()
-        setMeasuredDimension((size * 1.2f).toInt(), size.toInt())
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
