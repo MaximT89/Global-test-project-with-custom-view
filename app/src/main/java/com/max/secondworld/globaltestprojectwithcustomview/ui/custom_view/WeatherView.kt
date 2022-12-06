@@ -5,7 +5,6 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import androidx.core.content.ContextCompat
 import com.max.secondworld.globaltestprojectwithcustomview.R
 import kotlin.math.min
 
@@ -19,21 +18,22 @@ class WeatherView @JvmOverloads constructor(
     private var strokeWidth = 10f
     private var colorWhite: Int = resources.getColor(R.color.white)
     private var colorBlack: Int = resources.getColor(R.color.black)
-    private var intArray = intArrayOf(
-        ContextCompat.getColor(context, R.color.dodger_blue),
-        ContextCompat.getColor(context, R.color.blue_violet),
-        ContextCompat.getColor(context, R.color.dark_magenta)
-    )
+    private var intArray = GradientCreator.getStandart(context)
 
     private var path = Path()
     private val roundCorner = 50f
     private val offset = 50f
 
-    private var paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        isAntiAlias = true
+    private var paintRootPath = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.FILL
         pathEffect = CornerPathEffect(roundCorner)
         setShadowLayer(25f, 15f, 15f, colorBlack)
+    }
+
+    private var paintTextTemperature = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = colorWhite
+        textSize = 120f
+        typeface = Typeface.create("Arial", Typeface.BOLD)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -58,10 +58,11 @@ class WeatherView @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
-        paint.shader = LinearGradient(0f, 0f, 0f, height.toFloat(), intArray, null,
+        paintRootPath.shader = LinearGradient(0f, 0f, 0f, height.toFloat(), intArray, null,
             Shader.TileMode.MIRROR
         )
 
-        canvas?.drawPath(path, paint)
+        canvas?.drawPath(path, paintRootPath)
+        canvas?.drawText("15°C", offset * 2, offset * 5, paintTextTemperature)
     }
 }

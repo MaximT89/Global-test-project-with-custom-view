@@ -6,6 +6,12 @@ import com.max.secondworld.globaltestprojectwithcustomview.R
 
 object GradientCreator {
 
+    fun getStandart(context : Context) = intArrayOf(
+        ContextCompat.getColor(context, R.color.dodger_blue),
+        ContextCompat.getColor(context, R.color.blue_violet),
+        ContextCompat.getColor(context, R.color.dark_magenta)
+    )
+
     // -1000 .. -30
     fun getColdMax(context: Context): IntArray = intArrayOf(
         ContextCompat.getColor(context, R.color.medium_slate_blue),

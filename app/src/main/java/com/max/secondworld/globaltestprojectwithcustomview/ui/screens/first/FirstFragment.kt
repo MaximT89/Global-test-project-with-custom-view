@@ -10,8 +10,6 @@ class FirstFragment : BaseFragment<FragmentFirstBinding, FirstViewModel>(Fragmen
     override fun initView() = with(binding){
 
         rect1.textTemperature(-40)
-
-
         rect2.textTemperature(-25)
         rect3.textTemperature(-10)
         rect4.textTemperature(5)

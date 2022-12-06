@@ -18,9 +18,32 @@ class CircleView @JvmOverloads constructor(
 ) {
 
     var size = 320f
-    var strokeWidth = 10f
+    private var strokeWidth = 10f
     private var colorBlack: Int = context.resources.getColor(R.color.black)
     private var colorWhite: Int = resources.getColor(R.color.white)
+
+    private val paintCircleOne = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+
+        // таким образом можно добавить градиент
+        shader = LinearGradient(
+            0f,
+            0f,
+            0f,
+            height.toFloat(),
+            resources.getColor(R.color.dodger_blue),
+            resources.getColor(R.color.blue_violet),
+            Shader.TileMode.MIRROR
+        )
+        color = colorBlack
+        style = Paint.Style.FILL
+        strokeWidth = strokeWidth
+    }
+
+    private val paintCircleTwo = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = colorWhite
+        style = Paint.Style.FILL
+        strokeWidth = strokeWidth
+    }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
@@ -30,45 +53,7 @@ class CircleView @JvmOverloads constructor(
 
     override fun draw(canvas: Canvas?) {
         super.draw(canvas)
-
-        val paintCircleOne = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-
-            // таким образом можно добавить градиент
-            shader = LinearGradient(
-                0f,
-                0f,
-                0f,
-                height.toFloat(),
-                resources.getColor(R.color.dodger_blue),
-                resources.getColor(R.color.blue_violet),
-                Shader.TileMode.MIRROR
-            )
-
-            // цвет кисти
-            color = colorBlack
-
-            // сглаживание
-            isAntiAlias = true
-
-            // стиль кисти FILL заполнение, STROKE черта
-            style = Paint.Style.FILL
-
-            // толщина кисти
-            strokeWidth = strokeWidth
-        }
-
         canvas?.drawCircle(size / 2, size / 2, width / 2f - strokeWidth / 2, paintCircleOne)
-
-        val paintCircleTwo = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-            color = colorWhite // цвет кисти
-            isAntiAlias = true // сглаживание
-            style = Paint.Style.FILL // стиль кисти FILL заполнение, STROKE черта
-            strokeWidth = strokeWidth
-        }
-
         canvas?.drawCircle(size, size, width / 2f - strokeWidth / 2, paintCircleTwo)
-
-
     }
-
 }

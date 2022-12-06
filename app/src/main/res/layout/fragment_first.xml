@@ -19,43 +19,43 @@
             android:layout_marginVertical="40dp"
             android:orientation="horizontal">
 
-            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.EllipseWeatherView
                 android:id="@+id/rect1"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
                 android:layout_marginHorizontal="5dp" />
 
-            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.EllipseWeatherView
                 android:id="@+id/rect2"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
                 android:layout_marginHorizontal="5dp" />
 
-            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.EllipseWeatherView
                 android:id="@+id/rect3"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
                 android:layout_marginHorizontal="5dp" />
 
-            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.EllipseWeatherView
                 android:id="@+id/rect4"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
                 android:layout_marginHorizontal="5dp" />
 
-            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.EllipseWeatherView
                 android:id="@+id/rect5"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
                 android:layout_marginHorizontal="5dp" />
 
-            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.EllipseWeatherView
                 android:id="@+id/rect6"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
                 android:layout_marginHorizontal="5dp" />
 
-            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.RectView
+            <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.EllipseWeatherView
                 android:id="@+id/rect7"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
@@ -66,15 +66,7 @@
 
 
     <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.WeatherView
-        android:layout_width="match_parent"
-        android:layout_height="221dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.max.secondworld.globaltestprojectwithcustomview.ui.custom_view.WeatherView
+        android:id="@+id/weatherView"
         android:layout_width="match_parent"
         android:layout_height="221dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,7 +74,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.968" />
+        app:layout_constraintVertical_bias="0.732" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
